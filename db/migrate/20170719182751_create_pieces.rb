@@ -3,6 +3,7 @@ class CreatePieces < ActiveRecord::Migration[5.1]
     create_table :pieces do |t|
       t.string :title
       t.string :size
+      t.belongs_to :person
       t.text :description
       t.integer :value
       t.integer :location

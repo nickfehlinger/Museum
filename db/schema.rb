@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170719184058) do
+ActiveRecord::Schema.define(version: 20170719193952) do
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string "namespace"
@@ -83,9 +83,37 @@ ActiveRecord::Schema.define(version: 20170719184058) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "piece_media", force: :cascade do |t|
+    t.integer "piece_id"
+    t.integer "medium_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["medium_id"], name: "index_piece_media_on_medium_id"
+    t.index ["piece_id"], name: "index_piece_media_on_piece_id"
+  end
+
+  create_table "piece_styles", force: :cascade do |t|
+    t.integer "piece_id"
+    t.integer "style_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["piece_id"], name: "index_piece_styles_on_piece_id"
+    t.index ["style_id"], name: "index_piece_styles_on_style_id"
+  end
+
+  create_table "piece_techniques", force: :cascade do |t|
+    t.integer "piece_id"
+    t.integer "technique_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["piece_id"], name: "index_piece_techniques_on_piece_id"
+    t.index ["technique_id"], name: "index_piece_techniques_on_technique_id"
+  end
+
   create_table "pieces", force: :cascade do |t|
     t.string "title"
     t.string "size"
+    t.integer "person_id"
     t.text "description"
     t.integer "value"
     t.integer "location"
@@ -96,15 +124,7 @@ ActiveRecord::Schema.define(version: 20170719184058) do
     t.string "image_content_type"
     t.integer "image_file_size"
     t.datetime "image_updated_at"
-  end
-
-  create_table "pieces_mediums_joins", force: :cascade do |t|
-  end
-
-  create_table "pieces_styles_joins", force: :cascade do |t|
-  end
-
-  create_table "pieces_techniques_joins", force: :cascade do |t|
+    t.index ["person_id"], name: "index_pieces_on_person_id"
   end
 
   create_table "styles", force: :cascade do |t|

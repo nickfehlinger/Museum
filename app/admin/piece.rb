@@ -11,7 +11,7 @@ ActiveAdmin.register Piece do
 #   permitted << :other if params[:action] == 'create' && current_user.admin?
 #   permitted
 # end
-permit_params :title, :size, :description, :value, :location, :active, :image
+permit_params :title, :person, :size, :description, :styles, :techniques, :media, :value, :location, :active, :image
 
  show do |t|
     attributes_table do
@@ -30,8 +30,12 @@ permit_params :title, :size, :description, :value, :location, :active, :image
  form :html => { :enctype => "multipart/form-data" } do |f|
     f.inputs do
       f.input :title
+      f.input :person
       f.input :size
       f.input :description
+      f.input :styles
+      f.input :techniques
+      f.input :media
       f.input :value
       f.input :location
       f.input :active
