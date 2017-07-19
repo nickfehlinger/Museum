@@ -1,0 +1,57 @@
+<%= form_with(model: owner, local: true) do |form| %>
+  <% if owner.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(owner.errors.count, "error") %> prohibited this owner from being saved:</h2>
+
+      <ul>
+      <% owner.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :person_id %>
+    <%= form.text_field :person_id, id: :owner_person_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :piece_id %>
+    <%= form.text_field :piece_id, id: :owner_piece_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :year_bought %>
+    <%= form.number_field :year_bought, id: :owner_year_bought %>
+  </div>
+
+  <div class="field">
+    <%= form.label :year_sold %>
+    <%= form.number_field :year_sold, id: :owner_year_sold %>
+  </div>
+
+  <div class="field">
+    <%= form.label :price_bought %>
+    <%= form.number_field :price_bought, id: :owner_price_bought %>
+  </div>
+
+  <div class="field">
+    <%= form.label :price_sold %>
+    <%= form.number_field :price_sold, id: :owner_price_sold %>
+  </div>
+
+  <div class="field">
+    <%= form.label :location_bought %>
+    <%= form.text_field :location_bought, id: :owner_location_bought %>
+  </div>
+
+  <div class="field">
+    <%= form.label :location_sold %>
+    <%= form.text_field :location_sold, id: :owner_location_sold %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

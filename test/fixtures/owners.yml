@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  person: one
+  piece: one
+  year_bought: 1
+  year_sold: 1
+  price_bought: 1
+  price_sold: 1
+  location_bought: MyString
+  location_sold: MyString
+
+two:
+  person: two
+  piece: two
+  year_bought: 1
+  year_sold: 1
+  price_bought: 1
+  price_sold: 1
+  location_bought: MyString
+  location_sold: MyString

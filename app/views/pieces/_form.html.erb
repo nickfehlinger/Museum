@@ -1,0 +1,47 @@
+<%= form_with(model: piece, local: true) do |form| %>
+  <% if piece.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(piece.errors.count, "error") %> prohibited this piece from being saved:</h2>
+
+      <ul>
+      <% piece.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :title %>
+    <%= form.text_field :title, id: :piece_title %>
+  </div>
+
+  <div class="field">
+    <%= form.label :size %>
+    <%= form.text_field :size, id: :piece_size %>
+  </div>
+
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_area :description, id: :piece_description %>
+  </div>
+
+  <div class="field">
+    <%= form.label :value %>
+    <%= form.number_field :value, id: :piece_value %>
+  </div>
+
+  <div class="field">
+    <%= form.label :location %>
+    <%= form.number_field :location, id: :piece_location %>
+  </div>
+
+  <div class="field">
+    <%= form.label :active %>
+    <%= form.check_box :active, id: :piece_active %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Person:</strong>
+  <%= @owner.person %>
+</p>
+
+<p>
+  <strong>Piece:</strong>
+  <%= @owner.piece %>
+</p>
+
+<p>
+  <strong>Year bought:</strong>
+  <%= @owner.year_bought %>
+</p>
+
+<p>
+  <strong>Year sold:</strong>
+  <%= @owner.year_sold %>
+</p>
+
+<p>
+  <strong>Price bought:</strong>
+  <%= @owner.price_bought %>
+</p>
+
+<p>
+  <strong>Price sold:</strong>
+  <%= @owner.price_sold %>
+</p>
+
+<p>
+  <strong>Location bought:</strong>
+  <%= @owner.location_bought %>
+</p>
+
+<p>
+  <strong>Location sold:</strong>
+  <%= @owner.location_sold %>
+</p>
+
+<%= link_to 'Edit', edit_owner_path(@owner) %> |
+<%= link_to 'Back', owners_path %>
