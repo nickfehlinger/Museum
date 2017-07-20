@@ -6,7 +6,7 @@ class CreatePieces < ActiveRecord::Migration[5.1]
       t.belongs_to :person
       t.text :description
       t.integer :value
-      t.integer :location
+      t.belongs_to :location
       t.boolean :active
 
       t.timestamps

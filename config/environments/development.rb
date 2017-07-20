@@ -18,6 +18,12 @@ Rails.application.configure do
   #Paperclip
   Paperclip.options[:command_path] = "/usr/local/bin/"
 
+  # Add the font path
+config.assets.paths << Rails.root.join('app', 'assets', 'fonts')
+
+# Include font files to Assets
+config.assets.precompile << /\.(?:svg|eot|woff|ttf)$/
+
   # Enable/disable caching. By default caching is disabled.
   if Rails.root.join('tmp/caching-dev.txt').exist?
     config.action_controller.perform_caching = true

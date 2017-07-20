@@ -1,5 +1,6 @@
 class Piece < ApplicationRecord
 	belongs_to :person
+	belongs_to :location
 	has_many :owners
 	has_many :piece_media
 	has_many :piece_styles

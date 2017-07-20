@@ -22,9 +22,11 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+```
 rails generate active_admin:resource Piece
 rails generate active_admin:resource Person
 rails generate active_admin:resource Style
 rails generate active_admin:resource Technique
 rails generate active_admin:resource Medium
 rails generate active_admin:resource Owner
+```

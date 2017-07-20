@@ -11,5 +11,8 @@
 // about supported directives.
 //
 //= require rails-ujs
-//= require turbolinks
+
 //= require_tree .
+$("input[type='text']").bind('focus', function() {
+   $(this).css('background-color', 'red');
+});
