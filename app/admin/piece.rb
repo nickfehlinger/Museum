@@ -33,7 +33,7 @@ end
 #   actions
 # end
 
-permit_params :title, :person_id, :size, :description, {style_ids:[]}, {technique_ids:[]}, {media_ids:[]}, :value, :location, :active, :image
+permit_params :title, :person_id, :size, :description, {style_ids:[]}, {technique_ids:[]}, {media_ids:[]}, :value, :location_id, :active, :image
 
  show do |t|
     attributes_table do
@@ -67,10 +67,10 @@ permit_params :title, :person_id, :size, :description, {style_ids:[]}, {techniqu
       #   f.label(:styles, style.style)
       # end
       f.input :styles, as: :check_boxes, collection: Style.pluck(:style,:id)
-      f.input :techniques
-      f.input :media
+      f.input :techniques, as: :check_boxes, collection: Technique.pluck(:technique,:id)
+      f.input :media, as: :check_boxes, collection: Medium.pluck(:medium,:id)
       f.input :value
-      f.input :location
+      f.input :location_id, as: :select, collection: Location.all{|l| [l.name,l.id]}
       f.input :active
       f.input :image, hint: f.piece.image? ? image_tag(piece.image.url, height: '100') : content_tag(:span, "Upload Dat JPG/PNG/GIF image son")
       end

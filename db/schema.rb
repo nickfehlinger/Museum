@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170719193952) do
+ActiveRecord::Schema.define(version: 20170720173404) do
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string "namespace"
@@ -50,6 +50,12 @@ ActiveRecord::Schema.define(version: 20170719193952) do
     t.datetime "updated_at", null: false
     t.index ["person_id"], name: "index_artists_on_person_id"
     t.index ["piece_id"], name: "index_artists_on_piece_id"
+  end
+
+  create_table "locations", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "media", force: :cascade do |t|
@@ -116,7 +122,7 @@ ActiveRecord::Schema.define(version: 20170719193952) do
     t.integer "person_id"
     t.text "description"
     t.integer "value"
-    t.integer "location"
+    t.integer "location_id"
     t.boolean "active"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -124,6 +130,7 @@ ActiveRecord::Schema.define(version: 20170719193952) do
     t.string "image_content_type"
     t.integer "image_file_size"
     t.datetime "image_updated_at"
+    t.index ["location_id"], name: "index_pieces_on_location_id"
     t.index ["person_id"], name: "index_pieces_on_person_id"
   end
 

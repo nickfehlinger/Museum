@@ -3,14 +3,66 @@
   <head>
     <title>MfPoA</title>
     <%= csrf_meta_tags %>
-
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script scr='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js'></script>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-  	<p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+  <header>
+    <div class="container" id="ceaser">
+      <div class="row">
+        <div class="col-md-6">
+          <h1>Museum<br/><span class="little">For The</span> Planet<br/><span class="little">Of The</span> Apes</h1>
+        </div>
+        <div class="col-md-6">
+        <% if user_signed_in? %>
+        <%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
+        <% else %>
+          <!-- sign in -->
+          <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+  <div class="field">
+    <%= f.email_field :email, autofocus: true, placeholder: 'Email', autocomplete: "off" %>
+  </div>
+
+  <div class="field">
+    <%= f.password_field :password, autocomplete: "off", placeholder: 'Password' %>
+  </div>
+
+    <div class="field" id="inline">
+      <%= render "devise/shared/links" %>
+    </div>
+
+  <% if devise_mapping.rememberable? -%>
+    <div class="field" id="inline">
+      <%= f.check_box :remember_me %>
+      <%= f.label :remember_me %>
+    </div>
+  <% end -%>
+
+  <div class="actions">
+    <%= f.submit "Log in" %>
+  </div>
+<% end %>
+<% end %>
+          <p class="notice"><%= notice %></p>
+          <p class="alert"><%= alert %></p>
+        </div>
+      </div>
+      <div class="row">
+        <nav>
+          <ul>
+            <li>Explore The Museum</li>
+            <li>Plan Your Visit</li>
+            <li>Mission Statement</li>
+            <li>After School Programs</li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
     <%= yield %>
   </body>
 </html>
