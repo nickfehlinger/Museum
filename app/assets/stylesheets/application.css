@@ -141,4 +141,5 @@ nav li:hover{
 }
 #explore:hover #explorelst{
 	display: block;
+	transition-duration: 3s;
 }
