@@ -1,2 +1,11 @@
+<div id="location">
 <p id="notice"><%= notice %></p>
-
+<h2><%= @location.name %></h2>
+<% if @pieces %>
+	<% @pieces.each do |piece| %>
+	<a href="/pieces/<%= piece.id %>"><div>
+		<div class="piece" style="background-image: url('<%= piece.image.url %>');"></div>
+	</div></a>
+	<% end %>
+<% end %>
+</div>
