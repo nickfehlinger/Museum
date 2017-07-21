@@ -4,18 +4,13 @@
 #home{
 	background-image: url(ceaser.jpg);
 	background-position: center;
+	background-attachment: fixed;
 	width: 100%;
-	height: 72vh;
-	position: fixed;
 	bottom: 0;
 	right: 0;
 	left: 0;
 	z-index: -5;
 	opacity: .5;
-@font-face { 
-	font-family: "pota";
-	src: url('assets/planet_of_the_apes.ttf'); 
-}
 .navbar {
     overflow: hidden;
     background-color: #fece00;
@@ -98,25 +93,23 @@ background-color: white;
 
 .des {
 	display: inline-block;
-	float: left;
+	/*float: left;*/
 	padding-left: 130px;
 	width: 500px;
 	font-family: 'Playfair Display', serif;
 }
 .des2 {
 	display: inline-block;
-	float: right;
+	/*float: right;*/
 	padding-right: 130px;
 	width: 500px;
 	text-align: center;
+	vertical-align: top;
 }
 .des2 p {
 	width: 300px;
 	font-size: 10px;
 	margin: 0 auto;
 }
-
-
-
 
 }

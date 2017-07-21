@@ -36,14 +36,9 @@ body{
 
 header{
 	font-family: 'Planet of the Apes';
-	background-color: #ff0000;
+	background-color: maroon;
 	padding: 20px 0 10px;
-	height: 28vh;
 	width: 100%;
-	position: fixed;
-	top: 0;
-	right: 0;
-	left: 0;
 }
 
 header h1{
