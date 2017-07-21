@@ -42,7 +42,7 @@ header{
 	text-shadow: 2px 2px 3px #222;
 }
 
-header h1{
+header h1, h1 a{
 	font-family: 'Planet of the Apes';
 	line-height: 1.1em;
 	text-align: center;

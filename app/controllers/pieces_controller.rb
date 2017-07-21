@@ -1,4 +1,7 @@
-class PiecesController < InheritedResources::Base
+class PiecesController < ApplicationController
+ def show
+ 	@piece = Piece.find_by(id: params[:id])
+ end
 
   private
 
