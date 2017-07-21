@@ -1,4 +1,13 @@
 Rails.application.routes.draw do
+  resources :locations
+  get 'locations/new'
+
+  get 'locations/create'
+
+  get 'location/new'
+
+  get 'location/create'
+
   resources :owners
   resources :artists
   resources :media
