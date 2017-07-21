@@ -84,14 +84,14 @@ background-color: white;
 
 .des {
 	display: inline-block;
-	float-left;
+	float: left;
 	padding-left: 130px;
 	width: 500px;
 	font-family: 'Playfair Display', serif;
 }
 .des2 {
 	display: inline-block;
-	float-right;
+	float: right;
 	padding-right: 130px;
 	width: 500px;
 	text-align: center;
