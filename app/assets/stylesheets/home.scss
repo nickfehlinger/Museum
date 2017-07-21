@@ -4,14 +4,38 @@
 #home{
 	background-image: url(ceaser.jpg);
 	background-position: center;
+	background-attachment: fixed;
 	width: 100%;
-	height: 72vh;
-	position: fixed;
 	bottom: 0;
 	right: 0;
 	left: 0;
 	z-index: -5;
 	opacity: .5;
+<<<<<<< HEAD
+=======
+.navbar {
+    overflow: hidden;
+    background-color: #fece00;
+    position: fixed; 
+    top: 0; 
+    width: 100%; 
+    z-index: 10;
+    left: 0;
+}
+.navbar a {
+    float: left;
+    display: block;
+    color: #262228;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-family: 'Lato', sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+}
+h1 {
+	font-family: "pota";
+>>>>>>> df21eac3d357aafca362265dfb64555d5e966915
 
 
 
@@ -72,7 +96,7 @@ background-color: white;
 
 .des {
 	display: inline-block;
-	float: left;
+	/*float: left;*/
 	padding-left: 130px;
 	width: 500px;
 	font-family: 'Playfair Display', serif;
@@ -80,18 +104,16 @@ background-color: white;
 }
 .des2 {
 	display: inline-block;
-	float: right;
+	/*float: right;*/
 	padding-right: 130px;
 	width: 500px;
 	text-align: center;
+	vertical-align: top;
 }
 .des2 p {
 	width: 300px;
 	font-size: 10px;
 	margin: 0 auto;
 }
-
-
-
 
 }
