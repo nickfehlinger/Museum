@@ -39,6 +39,7 @@ header{
 	background-color: maroon;
 	padding: 20px 0 10px;
 	width: 100%;
+	text-shadow: 2px 2px 3px #222;
 }
 
 header h1{
@@ -117,6 +118,27 @@ nav li{
 }
 nav li:hover{
 	background-color: #fff;
-	color: #f00;
+	color: maroon;
 	transition-duration: .4s;
+}
+#explore{
+	display: inline-block;
+	position: relative;
+}
+#explorelst{
+	display: none;
+	position: absolute;
+	background-color: maroon;
+	z-index: 1;
+	left: 0;
+	padding: 10px;
+}
+#explorelst li{
+	display: block;
+}
+#explorebtn{
+	display: block;
+}
+#explore:hover #explorelst{
+	display: block;
 }
