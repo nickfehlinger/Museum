@@ -11,6 +11,8 @@
 	left: 0;
 	z-index: -5;
 	opacity: .5;
+<<<<<<< HEAD
+=======
 .navbar {
     overflow: hidden;
     background-color: #fece00;
@@ -33,11 +35,12 @@
 }
 h1 {
 	font-family: "pota";
+>>>>>>> df21eac3d357aafca362265dfb64555d5e966915
 
-	text-align: center;
-	color: black;
 
-}
+
+
+
 body {
 background-color: white;
 
@@ -82,7 +85,7 @@ background-color: white;
 
 /* Caption text */
 .text {
-  color: #f2f2f2;
+  color: white;
   font-size: 15px;
   padding: 8px 12px;
   position: absolute;
@@ -97,6 +100,7 @@ background-color: white;
 	padding-left: 130px;
 	width: 500px;
 	font-family: 'Playfair Display', serif;
+	color: white;
 }
 .des2 {
 	display: inline-block;
