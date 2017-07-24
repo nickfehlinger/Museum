@@ -11,17 +11,17 @@
 
    <div class="field">
     <%= f.label :firstname %><br />
-    <%= f.email_field :firstname, autofocus: true %>
+    <%= f.text_field :firstname, autofocus: true, class: :signup %>
   </div>
 
    <div class="field">
     <%= f.label :lastname %><br />
-    <%= f.email_field :lastname, autofocus: true %>
+    <%= f.text_field :lastname, autofocus: true, class: :signup %>
   </div>
 
    <div class="field">
     <%= f.label :phonenumber %><br />
-    <%= f.email_field :phonenumber, autofocus: true %>
+    <%= f.phone_field :phonenumber, autofocus: true, class: :signup %>
   </div>
 
   <div class="field">

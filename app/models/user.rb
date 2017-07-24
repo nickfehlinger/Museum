@@ -5,4 +5,6 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable
   has_many :user_programs
   has_many :programs, through: :user_programs
+
+  validates :phonenumber, presence: true, phone:true
 end
