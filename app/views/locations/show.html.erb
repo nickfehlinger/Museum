@@ -3,8 +3,9 @@
 <h2><%= @location.name %></h2>
 <% if @pieces %>
 	<% @pieces.each do |piece| %>
-	<a href="/pieces/<%= piece.id %>"><div>
+	<a href="/pieces/<%= piece.id %>"><div class="wrapper">
 		<div id="galpics" class="piece" style="background-image: url('<%= piece.image.url %>');"></div>
+			<p><%= piece.title %></p>
 	</div></a>
 	<% end %>
 <% end %>

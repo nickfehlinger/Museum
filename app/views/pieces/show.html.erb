@@ -1,34 +1,14 @@
+<div id="pieces">
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @piece.title %>
-</p>
+  <h2><%= @piece.title %></h2>
 
-<p>
-  <strong>Size:</strong>
-  <%= @piece.size %>
-</p>
+<img id="image" src="<%= @piece.image.url %>">
 
+  <p id="description"><%= @piece.description %></p>
+<%= @piece.size %>
 <p>
-  <strong>Description:</strong>
-  <%= @piece.description %>
+  <strong>Located In:</strong>
+  <%= @piece.location.name %>
 </p>
-
-<p>
-  <strong>Value:</strong>
-  <%= @piece.value %>
-</p>
-
-<p>
-  <strong>Location:</strong>
-  <%= @piece.location %>
-</p>
-
-<p>
-  <strong>Active:</strong>
-  <%= @piece.active %>
-</p>
-
-<%= link_to 'Edit', edit_piece_path(@piece) %> |
-<%= link_to 'Back', pieces_path %>
+</div>

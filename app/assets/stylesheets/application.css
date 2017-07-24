@@ -21,9 +21,10 @@
 	font-weight:normal;
 	font-style:normal;
 }
-html{
-	background-color: #000;
+a:hover{
+	background-color: rgba(255,255,255,0) !important;
 }
+
 body{
 	margin: 0;
 }
@@ -42,11 +43,16 @@ header{
 	text-shadow: 2px 2px 3px #222;
 }
 
-header h1, h1 a{
+header h1#title, h1 a#headerRef{
 	font-family: 'Planet of the Apes';
 	line-height: 1.1em;
 	text-align: center;
 	color: #fff;
+	font-size: 1.7em;
+	text-decoration: none;
+}
+header h1#title:hover, h1 a#headerRef:hover{
+	background-color: rgba(255,255,255,0);
 }
 
 header .little{
@@ -135,6 +141,10 @@ nav li:hover{
 }
 #explorelst li{
 	display: block;
+	font-size: 1.3em;
+}
+#explorelst li a:hover{
+	color: maroon;
 }
 #explorebtn{
 	display: block;

@@ -1,0 +1,1 @@
+jason.partial! "user_programs/user_program", user_program: @user_program

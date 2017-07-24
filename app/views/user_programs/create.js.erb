@@ -1,0 +1,4 @@
+console.log("<%= @user_program %>")
+elprogram = document.querySelector("#program_<%= @user_program.program_id %>");
+elprogram.removeChild(elprogram.querySelector("a"));
+elprogram.innerHTML += "<span class='thanks'>Thank you for signing up!</span>";

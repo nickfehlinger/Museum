@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170720173404) do
+ActiveRecord::Schema.define(version: 20170722183056) do
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string "namespace"
@@ -134,6 +134,13 @@ ActiveRecord::Schema.define(version: 20170720173404) do
     t.index ["person_id"], name: "index_pieces_on_person_id"
   end
 
+  create_table "programs", force: :cascade do |t|
+    t.string "title"
+    t.text "description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "styles", force: :cascade do |t|
     t.string "style"
     t.datetime "created_at", null: false
@@ -144,6 +151,15 @@ ActiveRecord::Schema.define(version: 20170720173404) do
     t.string "technique"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "user_programs", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "program_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["program_id"], name: "index_user_programs_on_program_id"
+    t.index ["user_id"], name: "index_user_programs_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
