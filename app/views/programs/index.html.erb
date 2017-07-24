@@ -1,0 +1,20 @@
+<div id="programs"><p id="notice"><%= notice %></p>
+
+<h2>Programs</h2>
+<% unless current_user %>
+<p>Please sign in to enroll in after school programs</p>
+<% end %>
+  <% Program.all.each do |program| %>
+  <div class="program" id="program_<%= program.id %>">
+        <h3><%= program.title %></h3>
+        <p class="description"><%= program.description %></p>
+        <% if current_user %>
+        	<% if program.user_programs.where(user_id: current_user.id).any? %>
+        	<p class="add already">You are already signed up!</p>
+        	<% else %>
+        	<%= link_to "Add Program", add_program_path(program), class: :add, method: :post, remote: true %>
+        	<% end %>
+        <% end %>
+   </div>
+    <% end %>
+</div>

@@ -1,3 +1,22 @@
 // Place all the styles related to the Pieces controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+#pieces{
+	margin: 10px auto;
+	width: 60%;
+	h2{
+		font-family: 'Planet of the Apes';
+		font-size: 4em;
+		color: black;
+		margin: 40px auto;
+	}
+	#image{
+		width: 100%;
+	}
+	#description{
+		font-size: 2em;
+		margin: 10px auto;
+		line-height: 1em;
+	}
+
+}
