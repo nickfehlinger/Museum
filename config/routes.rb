@@ -20,8 +20,8 @@ Rails.application.routes.draw do
   resources :pieces
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
-  devise_for :users, controllers: {sessions: 'user/sessions'}
-  devise_for :users, :controllers => { registrations: 'user/registrations' }
+  devise_for :users, controllers: {sessions: 'user/sessions', registrations: 'user/registrations'}
+  # devise_for :users, :controllers => {  }
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
   root to: "home#index"
