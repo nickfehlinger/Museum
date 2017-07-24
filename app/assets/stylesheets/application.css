@@ -117,12 +117,14 @@ nav ul{
 	font-family: 'Planet of the Apes';
 	text-align: center;
 }
-nav li{
+nav li, nav li a{
 	display: inline-block;
 	margin: 5px 15px;
 	padding: 5px;
+	text-decoration: none !important;
+	font-size: 1em;
 }
-nav li:hover{
+nav li:hover, nav li a:hover{
 	background-color: #fff;
 	color: maroon;
 	transition-duration: .4s;
@@ -141,7 +143,7 @@ nav li:hover{
 }
 #explorelst li{
 	display: block;
-	font-size: 1.3em;
+	font-size: .8em;
 }
 #explorelst li a:hover{
 	color: maroon;
