@@ -50,3 +50,5 @@ function showSlides(stay=false) {
     	return showSlides;
     })(slideIndex), 6000); // Change image every 6 seconds
 } 
+
+console.log(document.getElementsByClassName("mySlides"));
