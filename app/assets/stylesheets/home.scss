@@ -25,6 +25,12 @@
 
 .mySlides {
     display: none;
+    opacity: 1;
+    img{
+    	width: 1000px;
+    	height: 300px;
+    	z-index: 5;
+    }
 }
 
 /* Next & previous buttons */
@@ -47,7 +53,10 @@
   right: 0;
   border-radius: 3px 0 0 3px;
 }
-
+.prev {
+	left: 0;
+	border-radius: 3px 0 0 3px;
+}
 /* On hover, add a black background color with a little bit see-through */
 .prev:hover, .next:hover {
   background-color: rgba(0,0,0,0.8);

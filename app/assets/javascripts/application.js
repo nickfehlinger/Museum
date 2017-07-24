@@ -13,6 +13,8 @@
 //= require rails-ujs
 
 //= require_tree .
+document.addEventListener("DOMContentLoaded", function(){
+
 $("input[type='text']").bind('focus', function() {
    $(this).css('background-color', 'red');
 });
@@ -49,6 +51,4 @@ function showSlides(stay=false) {
     	console.log("slideIndex:", slideIndex)
     	return showSlides;
     })(slideIndex), 6000); // Change image every 6 seconds
-} 
-
-console.log(document.getElementsByClassName("mySlides"));
+});
