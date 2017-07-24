@@ -51,5 +51,4 @@ function showSlides(stay=false) {
     	console.log("slideIndex:", slideIndex)
     	return showSlides;
     })(slideIndex), 6000); // Change image every 6 seconds
-} 
 });
