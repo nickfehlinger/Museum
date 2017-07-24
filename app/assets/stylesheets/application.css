@@ -78,10 +78,10 @@ body input:-webkit-autofill {
 #user_password,
 #user_email:-webkit-autofill,
 #user_password:-webkit-autofill{
-	background-color: rgba(255,255,255,0) !important;
-	border:	none !important;
-	border-bottom: 2px solid #fff !important;
-	color: #fff !important;
+	background-color: rgba(255,255,255,0);
+	border:	none;
+	border-bottom: 2px solid #fff;
+	color: #fff;
 	border-radius: 0;
 	font-weight: bold;
 }
