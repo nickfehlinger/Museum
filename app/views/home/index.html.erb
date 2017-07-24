@@ -3,37 +3,29 @@
 
 <div class="slideshow-container">
   <div class="mySlides fade">
-    <img src="assets/pic1mus.jpg" style=" width:100%">
+    <img src="<%= Piece.find(3).image.url %>" style=" width:100%">
     <!-- <div class="text">Caption Text</div> -->
   </div>
 
   <div class="mySlides fade">
-    <img src="<%= Piece.find(3).image.url %>" style="width:100%">
+    <img src="<%= Piece.find(4).image.url %>" style="width:100%">
     <!-- <div class="text">Caption Two</div> -->
   </div>
 
   <div class="mySlides fade">
-    <img src="assets/pic3mus.jpg" style="width:100%">
+    <img src="<%= Piece.find(5).image.url %>" style="width:100%">
     <!-- <div class="text">Caption Three</div> -->
   </div>
   <div class="mySlides fade">
-    <img src="assets/pic4mus.png" style="width:100%">
+    <img src="<%= Piece.find(6).image.url %>" style="width:100%">
     <!-- <div class="text">Caption Three</div> -->
   </div>
   <div class="mySlides fade">
-    <img src="assets/pic5mus.jpg" style="width:100%">
+    <img src="<%= Piece.find(7).image.url %>" style="width:100%">
     <!-- <div class="text">Caption Three</div> -->
   </div>
   <div class="mySlides fade">
-    <img src="assets/pic6mus.jpg" style="width:100%">
-    <!-- <div class="text">Caption Three</div> -->
-  </div>
-  <div class="mySlides fade">
-    <img src="assets/pic7mus.png" style="width:100%">
-    <!-- <div class="text">Caption Three</div> -->
-  </div>
-  <div class="mySlides fade">
-    <img src="assets/pic8mus.jpeg" style="width:100%">
+    <img src="<%= Piece.find(8).image.url %>" style="width:100%">
     <!-- <div class="text">Caption Three</div> -->
   </div>
   <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
@@ -65,9 +57,9 @@ For more than a century the City of New Ape and the Trustees of The Museum of th
 </div>
 <div class="des2">
 <p>Featured art is examples of pieces found in our exibits ranging from war time art, contemporary works, and governmental pieces.</p><br>
-<img src="assets/ape1.jpg" style="width: 300px;">
+<img src="<%= Piece.find(10).image.url %>" style="width: 300px;">
 <br>
-<img src="assets/ape3.jpg" style="width: 300px;align-content: center;">
+<img src="<%= Piece.find(11).image.url %>" style="width: 300px;align-content: center;">
 </div>
 
 </div>

@@ -18,12 +18,13 @@
 /* Slideshow container */
 .slideshow-container {
   max-width: 1000px;
+  height: 300px;
   position: relative;
   margin: auto;
 }
 
 .mySlides {
-    display: none;
+    /*display: none;*/
 }
 
 /* Next & previous buttons */
